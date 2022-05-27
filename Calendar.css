@@ -1,0 +1,384 @@
+@font-face {
+  font-family:london ;
+  src: url(/police/OldLondon.ttf);
+}
+@font-face {
+  font-family:go;
+  src: url(/police/go3v2.ttf);
+}
+@font-face {
+  font-family:An;
+  src: url(/police/JMH\ Typewriter.ttf);
+}
+@font-face {
+  font-family:do;
+  src: url(/police/BadlyStamped.ttf);
+}
+::-webkit-scrollbar {
+  width: 1em;
+  background-color: #2b0000;
+}
+::-webkit-scrollbar-track {
+  background:#2b0000;
+  border-radius: 10px;
+  margin-block: .5em;
+}
+::-webkit-scrollbar-thumb {
+  background:white;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#4a0000;
+}
+.checkbox{
+  display: none;
+  float: left;
+  font-size: 30px;
+  color: #a30000;
+  text-shadow: 4px 2px 5px black;
+  line-height: 40px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+#check{
+  display: none;    
+}
+label.logo{
+  color: white;
+  text-shadow:  5px 0px 5px #a30000;
+  float: left;
+  margin-left: 10px;
+  font-family: do;
+  font-size: 55px;
+  animation-name: logoflip;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+@keyframes logoflip {
+  25%{padding:25px;}
+  50%{transform: rotateY(180deg);}
+  75%{scale:2.5;}
+  100%{color:black}
+}
+nav{
+  background-color: #101010 ;
+  grid-area: nav;
+  border-radius: 5px;
+  box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+nav ul{
+  list-style:none;
+  float: right;
+  transition: all 0s;
+}
+nav ul li{ 
+  display: inline-block;
+  margin: 17px 10px;
+  line-height: 10px;
+  box-shadow: 0px 0px 45px #a30000;
+}
+nav ul li a{   
+  color:white;
+  font-size: 20px;
+  padding: 26px 20px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  font-family: go;
+}
+nav ul li a:hover {
+  padding: 26px 60px;
+  transition: 1s;
+  color:  #a30000;
+  font-weight: 100;
+}
+body {
+  margin:0 auto;
+  text-align: center;
+  box-shadow: 0px 0px 10px black;  
+  animation-name: gradiant;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  }
+#container {
+  display: grid;
+  height: auto;
+  grid-template-areas: 
+      "nav"
+      "Container";
+}
+@keyframes gradiant {
+    0% {background-image: linear-gradient(#080808, #4f0000);}
+    100% {background-image: linear-gradient(#4f0000,#080808);}
+}
+#header {
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+  font-family: go;
+  display: flex;
+  justify-content: space-between;
+}
+#header button {
+  cursor: pointer;
+  box-shadow: 1px 0px 3px black;
+  text-shadow: 2px 4px 3px black;
+  border-radius: 5px;
+  color: white;
+  background-color:transparent;
+  font-size: 25px;
+  padding: 10px;
+  font-family: go;
+  border: 1px solid grey;
+}
+#header button:hover{
+  background-color:white;
+  color: #4a0000;
+  padding: 15px;
+}
+#monthDisplay{
+  text-shadow: 2px 4px 3px grey;
+/*animation: mymove 30s infinite;*/
+}
+#monthDisplay:hover{
+  text-shadow:none; 
+  animation:none;
+}
+#weekdays {
+  margin: auto;
+  color: white;
+  display: flex;
+  font-family: go;
+  font-size: 25px;
+  width: 1100px;
+  text-shadow: 2px 4px 3px grey;  
+  animation: mymove 30s infinite;
+}
+#weekdays:hover {
+  text-shadow: none;
+  animation: none;
+}
+@keyframes mymove {
+  50% {color: rgba(255, 0, 0, 0.208);}
+}
+#weekdays div {
+  padding-right: 45px;
+  padding-left: 20px;
+}
+#calendar {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+}
+.day {
+  font-family: go;
+  font-size: 20px;
+  width: 140px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 5px;
+  box-shadow: 0px 0px 3px #CBD4C2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.day:hover {
+  background-color:#4a0000;
+  color:white
+}
+.day + #currentDay {
+  background-color:#4a0000;
+  color: white;
+}
+#currentDay:hover{
+  color:grey;
+}
+.event {
+  font-size: 15px;
+  padding: 3px;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+.padding {
+  cursor: default !important;
+  background-color: transparent !important;
+  box-shadow: 0px 0px 3px #CBD4C2 !important;
+  border-style: solid;
+}
+  #newEventModal, #deleteEventModal{
+    color: white;
+    display: none;
+    z-index: 20;
+    padding: 30px;
+    background: linear-gradient(110deg, #200303 60%, #03232b 60%);
+    border-radius: 5px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: an;
+  }
+  #eventTitleInput {
+    font-family: an;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #cancelButton, #deleteButton {
+    background-color: #000000;
+    color: white;
+    font-size: 25px;
+    font-family: go;
+    border: none;
+  }
+  #cancelButton:hover, #deleteButton:hover { 
+    padding: 10px;
+  }
+  #saveButton, #closeButton {
+    background-color: #3c9d00;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-family: go;
+  }
+  #saveButton:hover, #closeButton :hover{
+    padding: 10px;
+  }
+  #eventText {
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    height: 150vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.912);
+    display: none;
+  }
+.noDecoration, a:link, a:visited {
+    text-decoration: none;
+}
+@media only screen and (max-width:550px){
+body{
+  width: 550px;
+}
+#container {
+  width:300px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  grid-template-areas:
+    'nav'
+    'Container'; 
+}
+label.logo{
+  margin-top: 10px;
+  font-size: 30px;
+}
+.checkbox {
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+nav ul{
+  background-color:rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 80px;
+  left: -200%;
+  text-align: center;
+}
+nav ul li a{
+  color:#4f0000;
+}
+nav ul li a:hover {
+  color: white;
+}
+#check:checked ~ ul {
+  width: 300px;
+  padding: 0;
+  top: 2.6em;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  transition: all 0.4s;
+  z-index: 10;
+}
+#check:checked ~ ul li {
+  margin: 50px;
+}
+#newEventModal, #deleteEventModal{
+  color: white;
+  display: none;
+  z-index: 20;
+  padding: 20px;
+  background: linear-gradient(110deg, #200303 60%, #03232b 60%);
+  border-radius: 5px;
+  right: calc(50% - 175px);
+  position: absolute;
+  font-family: an;
+}
+#header {
+  padding: 10px;
+  font-size: 20px;
+}
+#header button {
+  font-size: 10px;
+  padding: 10px;
+  font-family: go;
+  border: 1px solid grey;
+}
+#header button:hover{
+  background-color:white;
+  color: #4a0000;
+  padding: 12px;
+}
+#weekdays {
+  animation: none;
+  font-size: 8px;
+  width: 300px; 
+}
+#weekdays div {
+  padding-right: 3px;
+  padding-left: 8px;
+}
+#calendar {
+  width: 300px;
+}
+.day {
+  margin: 3px;
+  font-size: 15px;
+  width: 32px;
+  height: 50px;
+}
+}
+
+
+
+
+
+
+
+
