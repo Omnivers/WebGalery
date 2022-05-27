@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pictures.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="Lightbox.js" defer></script>
+    <script src="imgInput.js" defer></script>
+    <title>Pictures</title>
+</head>
+<body>
+    <div class="Container">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbox">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo">J&O</label>
+            <ul>
+                <li><a id="home" href="/Index/index.html">Acceuil</a></li>
+                <li><a id="pics" href="Pictures.html">Photos</a></li>
+                <li><a id="cal" href="/Calendar/Calendar.html">Calendrier</a></li>
+            </ul>
+        </nav>
+        <div class="Pictures" id="results">
+            <label for="image_input" id="style_input">
+                <img id="icon" src="/J&O/plus-line.svg">
+                 <input type="file" id="image_input" multiple="multiple" accept="image/png, image/jpg, image/jpeg">
+            </label>
+            <a href="/J&O/img2.jpg"><img src="/J&O/img2.jpg"></a>   
+            <a href="/J&O/img3.jpg"><img src="/J&O/img3.jpg"></a>
+            <a href="/J&O/img4.jpg"><img src="/J&O/img4.jpg"></a>
+            <a href="/J&O/img5.jpg"><img src="/J&O/img5.jpg"></a>
+            <a href="/J&O/img6.jpg"><img src="/J&O/img6.jpg"></a>
+            <a href="/J&O/img7.jpg"><img src="/J&O/img7.jpg"></a>
+            <a href="/J&O/img8.jpg"><img src="/J&O/img8.jpg"></a>
+            <a href="/J&O/img9.jpg"><img src="/J&O/img9.jpg"></a>
+            <a href="/J&O/img11.jpg"><img src="/J&O/img11.jpg"></a>
+            <a href="/J&O/img12.jpg"><img src="/J&O/img12.jpg"></a>
+            <a href="/J&O/img13.jpg"><img src="/J&O/img13.jpg"></a>
+        </div>
+        <div class="Lightbox">
+            <div class="LightboxContainer">
+                <img src=" " alt=" ">
+            </div>
+            <button class="LightboxClose">Fermer</button>
+            <button class="LightboxNext">Next</button>
+            <button class="LightboxPrev">Précédent</button>
+        </div>
+    </div>
+</body>
+</html>
