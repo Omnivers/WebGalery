@@ -1,6 +1,6 @@
 // Code d'Image pour les divs containers
-var Image=["/J&O/img6.jpg","/J&O/img7.jpg","/J&O/img8.jpg","/J&O/img9.jpg","/J&O/img13.jpg","/J&O/img14.jpg","/J&O/img15.jpg","/J&O/img16.jpg","/J&O/img17.jpg","/J&O/img18.jpg"]
-let x=0 
+/*var Image=["/J&O/img6.jpg","/J&O/img7.jpg","/J&O/img8.jpg","/J&O/img9.jpg","/J&O/img13.jpg","/J&O/img14.jpg","/J&O/img15.jpg","/J&O/img16.jpg","/J&O/img17.jpg","/J&O/img18.jpg"]
+let x=0 ;
 var timer=3000; 
 function Tistou(){
         if(x+2<Image.length){
@@ -19,6 +19,7 @@ function slideLaunch(){
     Time_conditions()
 }
 window.onload = slideLaunch;
+*/
 
 // Code de texte pour la div "Quotes"...
 
