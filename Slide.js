@@ -1,4 +1,4 @@
-// Code d'Image pour les divs containers
+// Code d'Image pour les divs containers avec une Database
 /*var Image=["/J&O/img6.jpg","/J&O/img7.jpg","/J&O/img8.jpg","/J&O/img9.jpg","/J&O/img13.jpg","/J&O/img14.jpg","/J&O/img15.jpg","/J&O/img16.jpg","/J&O/img17.jpg","/J&O/img18.jpg"]
 let x=0 ;
 var timer=3000; 
@@ -13,13 +13,26 @@ function Tistou(){
             x=0;
         }   
        setTimeout("Tistou()", timer);    
-    }
+    }*/
 function slideLaunch(){
-    Tistou()
+    //Tistou()
+    Tistou_2()
     Time_conditions()
-}*/
-//window.onload = slideLanch;
-window.onload = Time_conditions;
+}
+window.onload = slideLaunch;
+x=700
+function Tistou_2(){
+    document.content1.src=`https://picsum.photos/${x}/700`
+    document.content2.src=`https://picsum.photos/${x+100}/800`
+    document.content3.src=`https://picsum.photos/${x+100}/900`
+    x+=100;
+    if (x>1200) {
+        x=700;
+    }
+    setTimeout('Tistou_2()',2000);
+}
+//Code d'Image pour les divs containers Img generator
+
 
 // Code de texte pour la div "Quotes"...
 
