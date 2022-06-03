@@ -1,18 +1,18 @@
 @font-face {
     font-family:london ;
-    src: url(/police/OldLondon.ttf);
+    src: url(police/OldLondon.ttf);
 }
 @font-face {
     font-family:go;
-    src: url(/police/go3v2.ttf);
+    src: url(police/go3v2.ttf);
 }
 @font-face {
     font-family:An;
-    src: url(/police/JMH\ Typewriter.ttf);
+    src: url(police/JMH\ Typewriter.ttf);
 }
 @font-face {
     font-family:do;
-    src: url(/police/BadlyStamped.ttf);
+    src: url(police/BadlyStamped.ttf);
 }
 ::-webkit-scrollbar {
     width: 1em;
@@ -134,7 +134,7 @@ nav ul li a:hover {
     background-color: #2b0000;
     border-radius: 10px;
 }
-.Pictures img:not(#icon){
+.Pictures img{
     border-radius: 10px;
     width: 300px;
     height: 400px;
@@ -143,20 +143,10 @@ nav ul li a:hover {
     cursor: pointer;
     transition: 0.8s;
 }
-.Pictures :not(#icon):hover{
+.Pictures :hover{
     transform: rotateY(360deg);
 }
-#icon{
-    border-radius: 20px;
-    background-color:rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    cursor: pointer;
-    margin: 14.5vh;
-    margin-bottom: 22.5vh;
-}
-#icon:hover{
-    background-color: white;
-}
+
 input[type="file"] {
     display: none;
 }
