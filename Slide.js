@@ -17,9 +17,9 @@ function Tistou(){
 function slideLaunch(){
     Tistou()
     Time_conditions()
-}
-window.onload = slideLaunch;
-*/
+}*/
+//window.onload = slideLanch;
+window.onload = Time_conditions;
 
 // Code de texte pour la div "Quotes"...
 
@@ -43,7 +43,7 @@ function words() {
     }
 function Time_conditions(){
    if(numTexte<Texte.length){
-        setTimeout("words()",8000);
+        setTimeout("words()",4000);
     }else if(numTexte==Texte.length){
         numTexte=0
      Time_conditions();
