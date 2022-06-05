@@ -196,43 +196,34 @@ input[type="file"] {
 
 }
 .LightboxNext{
-    border: none;
-    background: url('/J&O/caret-right-solid.svg') center center/100% 100%;
-    width: 27px;
-    height: 100px;
-    text-indent: -3000px;
     opacity: 0.8;
     cursor: pointer;
     position: fixed;
     top: 50%;
-    left: 90%;
+    left: 80%;
     z-index: 11;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
 }
 .LightboxPrev{
-    border: none;
-    background:url('/J&O/caret-right-solid.svg') center center/100% 100%;
-    width: 27px;
-    height: 100px;
-    text-indent: -3000px;
     cursor: pointer;
     position: fixed;
     top: 50%;
-    right:90%;
-    transform: rotate(180deg);
+    right:80%;
     z-index: 11;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
 
 }
 .LightboxClose{
-    border: none;
-    background: url('/J&O/xmark-solid.svg') center center/100% 100%;
-    width: 27px;
-    height: 100px;
-    text-indent: -3000px;
+    color: black;
     cursor: pointer;
     position: fixed;
     left: 90%;
-    bottom: 85%;
-    z-index: 12;
+    bottom: 90%;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
 }
 .checkbox{
     display: none;
