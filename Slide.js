@@ -29,7 +29,7 @@ function Tistou_2(){
     if (x>1200) {
         x=700;
     }
-    setTimeout('Tistou_2()',2000);
+    setTimeout('Tistou_2()',4000);
 }
 //Code d'Image pour les divs containers Img generator
 
