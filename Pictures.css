@@ -70,23 +70,11 @@ body{
 #check{
     display: none;    
 }
-label.logo{
-    color: white;
-    text-shadow:  5px 0px 5px #a30000;
+img.logo{
+    margin: 20px;
+    height: 40px;
     float: left;
-    margin-left: 10px;
-    font-family: do;
-    font-size: 55px;
-    animation-name: logoflip;
-    animation-duration: 3s;
-    animation-direction: alternate;
 }
-@keyframes logoflip {
-    25%{padding:25px;}
-    50%{transform: rotateY(180deg);}
-    75%{scale:2.5;}
-    100%{color:black}
-  }
 nav{
     background-color: #101010 ;
     grid-area: nav;

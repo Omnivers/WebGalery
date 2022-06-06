@@ -1,22 +1,22 @@
 @font-face {
     font-family:london ;
-    src: url(/police/OldLondon.ttf);
+    src: url(police/OldLondon.ttf);
 }
 @font-face {
     font-family:ecole ;
-    src: url(/police/LearningCurve.ttf);
+    src: url(police/LearningCurve.ttf);
 }
 @font-face {
     font-family:go;
-    src: url(/police/go3v2.ttf);
+    src: url(police/go3v2.ttf);
 }
 @font-face {
     font-family:An;
-    src: url(/police/JMH\ Typewriter.ttf);
+    src: url(police/JMH\ Typewriter.ttf);
 }
 @font-face {
     font-family:do;
-    src: url(/police/BadlyStamped.ttf);
+    src: url(police/BadlyStamped.ttf);
 }
 ::-webkit-scrollbar {
     width: 1em;
@@ -44,7 +44,7 @@ body{
     display: grid;
     height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1fr 0.2fr;
+    grid-template-rows: 0.1fr 1.5fr 1fr 0.1fr;
     grid-template-areas: 
         "nav nav nav nav"
         "Sidebar Presentation Presentation Presentation"
@@ -67,13 +67,10 @@ body{
 #check{
     display: none;    
 }
-label.logo{
-    color: white;
-    text-shadow:  5px 0px 5px #a30000;
+img.logo{
+    margin: 20px;
+    height: 40px;
     float: left;
-    margin-left: 10px;
-    font-family: do;
-    font-size: 55px;
     animation-name: logoflip;
     animation-duration: 3s;
     animation-direction: alternate;
@@ -200,13 +197,12 @@ section ul li{
     box-shadow: 0px 2px 4px rgb(255, 0, 0);
     grid-area: content1;    
     transition: 0s;
-    max-width: 100%;
-    height: 100%;
+    
 }
 #content1:hover{
     backdrop-filter: none;
     box-shadow: none;
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: 0.2s;
     z-index: 10;
 }
@@ -217,7 +213,7 @@ section ul li{
     transition: 0s;
 }
 #content2:hover{
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: 0.3s;
     backdrop-filter: none;
     box-shadow: none;
@@ -230,7 +226,7 @@ section ul li{
     transition: 0s;
 }
 #content3:hover{
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: 0.3s;
     backdrop-filter: none;
     box-shadow: none;
@@ -251,33 +247,32 @@ section ul li{
 }
 #LastEvent{
     -webkit-box-reflect:below 10px linear-gradient(transparent,rgba(255,255,255,0.06));
-    margin: 70px;
-    font-family:ecole;
-    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
     border: solid 2px white ;
     border-radius: 10px;
     cursor: pointer;
-    animation: Lastevent;
-    animation-duration: 1s;
-    animation-iteration-count:2;
-    animation-delay: 5s;
-
+    margin: 50px;
+    padding: 30px;
 }
-@keyframes Lastevent{
-    0% {transform:rotateZ(-20deg);}
-    10% {transform:rotateZ(-16deg);}
-    20% {transform:rotateZ(-13deg);}
-    30% {transform:rotateZ(-10deg);}
-    40% {transform:rotateZ(-6deg);}
-    50% {transform:rotateZ(0deg);}
-    60% {transform:rotateZ(6deg);}
-    70% {transform:rotateZ(10deg);}
-    80% {transform:rotateZ(13deg);}
-    90% {transform:rotateZ(16deg);}
-    100% {transform:rotateZ(20deg);}
-  }
+#FirstEvent{
+    -webkit-box-reflect:below 10px linear-gradient(transparent,rgba(255,255,255,0.06));
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    border: solid 2px white ;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 50px;
+    padding: 30px;
+}
+
+
 #LastEvent:hover{
-    background-color:#03232b ;
+    background-color:#a30000 ;
+    transition: 1s;
+}
+#FirstEvent:hover{
+    background-color:#a30000 ;
     transition: 1s;
 }
 #Addnewevent{
@@ -294,19 +289,14 @@ section ul li{
     -webkit-box-reflect:below 10px linear-gradient(transparent,rgba(255,255,255,0.04));
     margin-top: 50px;
     cursor: pointer;
-    animation: Lastevent;
-    animation-duration: 1s;
-    animation-iteration-count:2;
-    animation-delay: 5s;
 }
 .fa-calendar-plus:hover{
-    color: #03232b  ;
     font-family: "Font Awesome 6 Free";
     font-weight: 10;
-    font-size: 13em;
+    font-size: 11em;
 }
 .fa-square-envelope{
-    color: blue;
+    color: grey;
 }
 .fa-linkedin{
  color: aqua;

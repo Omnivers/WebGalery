@@ -1,18 +1,18 @@
 @font-face {
   font-family:london ;
-  src: url(/police/OldLondon.ttf);
+  src: url(police/OldLondon.ttf);
 }
 @font-face {
   font-family:go;
-  src: url(/police/go3v2.ttf);
+  src: url(police/go3v2.ttf);
 }
 @font-face {
   font-family:An;
-  src: url(/police/JMH\ Typewriter.ttf);
+  src: url(police/JMH\ Typewriter.ttf);
 }
 @font-face {
   font-family:do;
-  src: url(/police/BadlyStamped.ttf);
+  src: url(police/BadlyStamped.ttf);
 }
 ::-webkit-scrollbar {
   width: 1em;
@@ -43,23 +43,12 @@
 #check{
   display: none;    
 }
-label.logo{
-  color: white;
-  text-shadow:  5px 0px 5px #a30000;
+img.logo{
+  margin: 20px;
+  height: 40px;
   float: left;
-  margin-left: 10px;
-  font-family: do;
-  font-size: 55px;
-  animation-name: logoflip;
-  animation-duration: 3s;
-  animation-direction: alternate;
 }
-@keyframes logoflip {
-  25%{padding:25px;}
-  50%{transform: rotateY(180deg);}
-  75%{scale:2.5;}
-  100%{color:black}
-}
+
 nav{
   background-color: #101010 ;
   grid-area: nav;

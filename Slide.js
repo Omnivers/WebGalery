@@ -67,25 +67,37 @@ let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('e
 const Levent=document.getElementById('LastEvent');
 const icon=document.getElementById('icon');
 const Add=document.getElementById('Addnewevent');
+const Fevent=document.getElementById('FirstEvent');
+const RandomEvent=document.getElementById('AnotherEvent');
 
 function cal(){
     window.open("Calendar.html");
 }
 Levent.addEventListener("click",cal);
 icon.addEventListener('click',cal);
+Fevent.addEventListener('click',cal);
 
 if (events.length<1) {
     Levent.style.display='none';
     Add.style.display='block';
     icon.style.display='block';
-}else{
-    let Lastevent=events[events.length-1];
-    let itemLevent=document.createTextNode(`Date : ${Lastevent.date}  Event : ${Lastevent.title}`);
+    Fevent.style.display='none';
+}else if(events.length<2){
+    let Lastevent=events[0];
+    let itemLevent=document.createTextNode(`Event : ${Lastevent.title}`);
     Levent.appendChild(itemLevent);
-    Add.style.display='none';
-    icon.style.display='none';
+    Fevent.style.display='none';
+    Add.innerHTML="Add/Edit an event :";
+    
+}else{
+    let Lastevent=events[0];
+    let itemLevent=document.createTextNode(`Event : ${Lastevent.title}`);
+    Levent.appendChild(itemLevent);
+    let FirstEvent=events[1];
+    let itemFevent=document.createTextNode(`Event : ${FirstEvent.title}`);
+    Fevent.appendChild(itemFevent);
+    Add.innerHTML="Add/Edit an event :";
 }
-
 
     
   
